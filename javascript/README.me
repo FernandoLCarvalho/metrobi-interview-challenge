@@ -8,9 +8,8 @@ This folder contains solutions to specific JavaScript challenges.
 
 Write a JavaScript function that finds duplicate items in any given array and returns them in a new array.
 
-### Pseudocode
+### Pseudocode Question 1
 
-```plaintext
 START function findDuplicates(arr)
   INITIALIZE empty array duplicates
   INITIALIZE empty object itemCounts
@@ -30,4 +29,17 @@ START function findDuplicates(arr)
   END FOR
 
   RETURN duplicates array
+END function
+
+
+### Pseudocode Question 2
+
+START function asyncPrint(arr, delay = 1000, index = 0)
+  IF index is greater than or equal to the length of arr THEN
+    EXIT function (base case for recursion)
+  END IF
+
+  PRINT arr[index]
+  WAIT for delay milliseconds (awaiting a Promise with setTimeout)
+  CALL asyncPrintRecursive with arr, delay * 2, and index + 1
 END function
