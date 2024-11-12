@@ -1,0 +1,33 @@
+# JavaScript Challenges
+
+This folder contains solutions to specific JavaScript challenges.
+
+## findDuplicates Function
+
+### Problem Description
+
+Write a JavaScript function that finds duplicate items in any given array and returns them in a new array.
+
+### Pseudocode
+
+```plaintext
+START function findDuplicates(arr)
+  INITIALIZE empty array duplicates
+  INITIALIZE empty object itemCounts
+
+  FOR each item in arr DO
+    IF item already exists as a key in itemCounts THEN
+      INCREMENT itemCounts[item] by 1
+    ELSE
+      SET itemCounts[item] to 1
+    END IF
+  END FOR
+
+  FOR each key, value in itemCounts DO
+    IF value > 1 THEN
+      ADD key to the duplicates array
+    END IF
+  END FOR
+
+  RETURN duplicates array
+END function
