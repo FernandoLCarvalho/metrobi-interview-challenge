@@ -1,8 +1,12 @@
 import styles from '../styles/flexPage.module.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function FlexPage() {
+
+    const navigate = useNavigate();
+
     return (
-        <div>
+        <div className='p-4'>
             {/* Header */}
             <header className="w-full bg-cyan-300 text-white mb-2 h-16 flex items-center justify-center">
                 <h1 className="text-2xl font-semibold">Header</h1>
@@ -51,6 +55,14 @@ export default function FlexPage() {
             <footer className={`${styles.footer} w-full text-white h-20 flex items-center justify-center mt-2`}>
                 <h1 className="text-2xl font-medium">Footer</h1>
             </footer>
+
+            {/* Added a "go back" button to return to main page */}
+            <div className='flex mt-24 justify-center'>
+                <button className="w-1/2 px-4 py-2 font-semibold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-700 focus:ring-blue-400 focus:ring-opacity-75 transition duration-200 ease-in-out" onClick={() => navigate('/')}>
+                    Go back
+                </button>
+            </div>
+
         </div>
     );
 }
