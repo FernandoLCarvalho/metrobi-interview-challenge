@@ -43,3 +43,33 @@ START function asyncPrint(arr, delay = 1000, index = 0)
   WAIT for delay milliseconds (awaiting a Promise with setTimeout)
   CALL asyncPrintRecursive with arr, delay * 2, and index + 1
 END function
+
+### Pseudocode Question 3
+
+START function validateBrackets(str)
+  INITIALIZE empty stack
+  INITIALIZE pairs = { ")": "(", "}": "{", "]": "[" }
+
+  FOR each char in str DO
+    IF char is an opening bracket ("(", "{", or "[") THEN
+      PUSH char onto stack
+    ELSE IF char is a closing bracket (")", "}", or "]") THEN
+      IF stack is empty THEN
+        RETURN false
+      END IF
+      
+      SET lastItem to POP from stack
+      IF lastItem is not equal to pairs[char] THEN
+        RETURN false
+      END IF
+    END IF
+  END FOR
+
+  IF stack is empty THEN
+    RETURN true
+  ELSE
+    RETURN false
+  END IF
+END function
+
+

@@ -15,7 +15,7 @@ function findDuplicates(arr) {
 
     for (let [item, count] of Object.entries(frequencyCounter)) {
         if (count > 1) { 
-            duplicates.push(item); // simple example: [{1,2}, {2,1}, {3,3}, {4,1}, {5,2}], it will print ('1','3','5')
+            duplicates.push(item); // simple example: [{1,2}, {2,1}, {3,3}, {4,1}, {5,2}], it will be ('1','3','5')
         }
     }
 
