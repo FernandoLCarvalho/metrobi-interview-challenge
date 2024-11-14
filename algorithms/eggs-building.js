@@ -1,14 +1,14 @@
 
 /* First things first, I need to know the best floor to start throwing the eggs for maximum efficiency and less attempts */
 
-/* Whatever number of floor a building has, this formula should give me the best floor to start. Since we have 100 floors, let's calculated this for 100 */
+/* Whatever number of floor a building has, this function should give me the best floor to start. Since we have 100 floors, let's calculated this for 100 */
 function findOptimalStartingFloor(numberFloors) {
-    let k = 0;
+    let efficientFloorToStart = 0;
     let sum = 0;
 
     while (sum <= numberFloors) {
-        k++;
-        sum += k;
+        efficientFloorToStart ++;
+        sum += efficientFloorToStart;
     }
 
     return k
