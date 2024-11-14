@@ -21,6 +21,7 @@ async function asyncPrint(arr) {
 
     for (const item of arr) {
         console.log(item);
+        return item;
         await new Promise(complete => setTimeout(complete, delay));
         delay *= 2;
     }
