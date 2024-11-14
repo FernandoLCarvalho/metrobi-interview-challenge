@@ -11,7 +11,7 @@ This repository contains the solutions for the Metrobi interview challenge.
   - **How to run**: `cd react/react-challenges` and `npm start`
   
 - **algorithms/**: Algorithms implemented in JavaScript.
-  - **How to run**: `node fileName.js`
+  - **How to run**: `node eggs-building.js`
   
 - **optimization/**: Optimization functions.
   - **How to run**: `node getMaxValue.js`
